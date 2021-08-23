@@ -1,0 +1,12 @@
+.Navbar {
+  border-bottom: 1px solid #999;
+
+  &__nav {
+    display: flex;
+    flex-direction: row !important;
+    
+    &__item {
+      margin: 0 10px;
+    }
+  }
+}

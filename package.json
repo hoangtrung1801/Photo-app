@@ -1,11 +1,8 @@
 {
-  "name": "react",
+  "name": "photo-app",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "@reduxjs/toolkit": "1.6.1",
@@ -13,6 +10,7 @@
     "node-sass": "6.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-hook-form": "7.13.0",
     "react-redux": "7.2.4",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.0",

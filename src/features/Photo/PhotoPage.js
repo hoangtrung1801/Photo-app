@@ -21,7 +21,7 @@ const Content = ({ photos }) => (
           <CardImg
             top
             width="100%"
-            src={getUrlImage(photo.id)}
+            src={photo.id !== -1 ? getUrlImage(photo.id) : photo.url}
             alt="Loading..."
           />
           <CardBody>

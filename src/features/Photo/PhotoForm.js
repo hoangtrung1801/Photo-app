@@ -70,7 +70,6 @@ const PhotoForm = () => {
 
   const submit = (data) => {
     data.id = randomNumber;
-    console.log(data);
     dispatch(addNewPhoto({ ...data, category: data.category.value }));
     history.push("/");
   };

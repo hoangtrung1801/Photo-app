@@ -8,16 +8,6 @@ const initialState = {
   photos: []
 };
 
-// export const fetchPhotos = createAsyncThunk(
-//   "photos/fetchPhotos",
-//   async ({ value }) => {
-//     const res = await fetch(
-//       `https://api.unsplash.com/search/photos?page=1&per_page=50&query=${value}&client_id=${keyUnplash}`
-//     );
-//     return res.json();
-//   }
-// );
-
 const photoSlice = createSlice({
   name: "photos",
   initialState,

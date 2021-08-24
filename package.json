@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@reduxjs/toolkit": "1.6.1",
+    "axios": "0.21.1",
     "bootstrap": "5.1.0",
     "node-sass": "6.0.1",
     "react": "17.0.2",

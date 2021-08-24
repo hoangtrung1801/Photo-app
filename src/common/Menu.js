@@ -14,17 +14,25 @@ const Menu = () => {
         </NavbarBrand>
         <Nav className="mr-auto Navbar__nav" navbar>
           <NavItem className="Navbar__nav__item">
-            {/* <NavLink href="/">Home</NavLink> */}
             <NavLink>
               <Link to="/" className="text-decoration-none">
                 Home
               </Link>
             </NavLink>
           </NavItem>
+
           <NavItem className="Navbar__nav__item">
             <NavLink>
               <Link to="/new" className="text-decoration-none">
                 Add new photo
+              </Link>
+            </NavLink>
+          </NavItem>
+
+          <NavItem className="Navbar__nav__item">
+            <NavLink>
+              <Link to="/find" className="text-decoration-none">
+                Find photo
               </Link>
             </NavLink>
           </NavItem>

@@ -7,19 +7,23 @@ const Menu = () => {
   return (
     <div className="Navbar">
       <Navbar color="light">
-        <NavbarBrand href="/">Photo App</NavbarBrand>
+        <NavbarBrand>
+          <Link to="/" className="text-decoration-none">
+            Photo App
+          </Link>
+        </NavbarBrand>
         <Nav className="mr-auto Navbar__nav" navbar>
           <NavItem className="Navbar__nav__item">
             {/* <NavLink href="/">Home</NavLink> */}
             <NavLink>
-              <Link to="/" style={{ textDecoration: `none` }}>
+              <Link to="/" className="text-decoration-none">
                 Home
               </Link>
             </NavLink>
           </NavItem>
           <NavItem className="Navbar__nav__item">
             <NavLink>
-              <Link to="/new" style={{ textDecoration: `none` }}>
+              <Link to="/new" className="text-decoration-none">
                 Add new photo
               </Link>
             </NavLink>

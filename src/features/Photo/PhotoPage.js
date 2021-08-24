@@ -1,14 +1,39 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Col, Row } from "reactstrap";
+import { useSelector } from "react-redux";
+import {
+  Card,
+  CardBody,
+  CardImg,
+  CardSubtitle,
+  CardTitle,
+  Col,
+  Row
+} from "reactstrap";
 import { getUrlImage } from "../../global/function";
-import { selectAllPhotos } from "./photoSlice";
+import PhotoFilter from "./PhotoFilter";
+import { selectAllPhotos, selectCurFilter } from "./photoSlice";
 
 const Content = ({ photos }) => (
-  <Row sm="2" md="3" lg="4" className="gu">
+  <Row xs="1" sm="2" md="3" lg="4" className="gy-3 mt-3">
     {photos.map((photo) => (
       <Col>
-        <img src={getUrlImage(photo.id)} alt="Loading ..." />
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src={getUrlImage(photo.id)}
+            alt="Loading..."
+          />
+          <CardBody>
+            <CardTitle tag="h4">{photo.title}</CardTitle>
+            <CardSubtitle
+              tag="span"
+              className="text-muted fw-lighter text-capitalize"
+            >
+              {photo.category}
+            </CardSubtitle>
+          </CardBody>
+        </Card>
       </Col>
     ))}
   </Row>
@@ -16,15 +41,20 @@ const Content = ({ photos }) => (
 
 const PhotoPage = () => {
   const photos = useSelector(selectAllPhotos());
-  console.log(photos);
+  const curFilter = useSelector(selectCurFilter());
 
   return (
     <div className="PhotoPage">
-      {photos.length === 0 && <h1>Have no photos</h1>}
+      {photos.length === 0 && <p>You do not have photos ...</p>}
       {photos.length > 0 && (
         <>
-          <h1>Photos</h1>
-          <Content photos={photos} />
+          <h1>My Photo</h1>
+          <PhotoFilter />
+          <Content
+            photos={photos.filter(
+              ({ category }) => curFilter === "all" || category === curFilter
+            )}
+          />
         </>
       )}
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Form, FormGroup, Input, Label } from "reactstrap";
-import { getUrlImage } from "../../global/function";
+import { getUrlImage } from "global/function";
 import Select from "react-select";
 import { useDispatch } from "react-redux";
 import { addNewPhoto } from "./photoSlice";

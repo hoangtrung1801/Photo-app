@@ -1,3 +1,4 @@
+import { getUrlImage } from "global/function";
 import React from "react";
 import { useSelector } from "react-redux";
 import {
@@ -9,7 +10,6 @@ import {
   Col,
   Row
 } from "reactstrap";
-import { getUrlImage } from "../../global/function";
 import PhotoFilter from "./PhotoFilter";
 import { selectAllPhotos, selectCurFilter } from "./photoSlice";
 
